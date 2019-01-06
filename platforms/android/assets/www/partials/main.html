@@ -1,0 +1,219 @@
+﻿<div id="loader"><img src="img/Busy.gif"/></div>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <img src="img/menuIcon.png" id="menuIcon" data-toggle="modal" data-target="#menu" />
+            <a onclick="showAdd()" class="navbar-brand" href="#">
+                <span id="navTitle">התנ"ך</span>
+            </a>
+            <img src="img/mezuza.png" id="mezuza" data-toggle="modal" data-target="#info" />
+        </div>
+    </div>
+</nav>
+
+<center>
+    <div id="mainPic"></div>
+</center>
+
+<center>
+    <input ng-click="getParasha()" id="parashaBtn" class="btn btn-primary" type="reset" value="לפרשת השבוע">
+</center>
+
+<div id="searchDiv">
+    <input id="searchText" class="form-control" type="text" placeholder="הזן טקסט לחיפוש">
+    <input ng-click="searchText()" id="searchBtn" class="btn btn-primary" type="submit" value="חפש">
+</div>
+
+<br>
+
+<div class="booksDiv">
+    <p class="booksTitleP">
+        <img src="img/toraIcon.png" style="height: 4%; width: 10%;" />
+        <strong id="bigBook" style="font-size: large; vertical-align: sub;">תורה</strong>
+    </p>
+    <table class="bookNames">
+        <tr>
+            <td><span ng-click="goToBook('בראשית')">בראשית</span></td>
+            <td><span ng-click="goToBook('שמות')">שמות</span>|</td>
+            <td><span ng-click="goToBook('ויקרא')">ויקרא</span>|</td>
+            <td><span ng-click="goToBook('במדבר')">במדבר</span>|</td>
+            <td><span ng-click="goToBook('דברים')">דברים</span>|</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <p class="booksTitleP">
+        <img src="img/neviimIcon.png" style="height: 5%; width: 10%;" />
+        <strong style="font-size: large; vertical-align: sub;">נביאים</strong>
+    </p>
+    <table class="bookNames">
+        <tr>
+            <td><span ng-click="goToBook('יהושע')">יהושע</span></td>
+            <td><span ng-click="goToBook('שופטים')">שופטים</span>|</td>
+            <td><span ng-click="goToBook('שמואל')">שמואל</span>|</td>
+            <td><span ng-click="goToBook('מלכים')">מלכים</span>|</td>
+            <td><span ng-click="goToBook('ישעיהו')">ישעיהו</span>|</td>
+        </tr>
+        <tr>
+            <td><span ng-click="goToBook('ירמיהו')">ירמיהו</span></td>
+            <td><span ng-click="goToBook('יחזקאל')">יחזקאל</span>|</td>
+            <td><span ng-click="goToBook('הושע')">הושע</span>|</td>
+            <td><span ng-click="goToBook('יואל')">יואל</span>|</td>
+            <td><span ng-click="goToBook('עמוס')">עמוס</span>|</td>
+        </tr>
+        <tr>
+            <td><span ng-click="goToBook('עובדיה')">עובדיה</span></td>
+            <td><span ng-click="goToBook('יונה')">יונה</span>|</td>
+            <td><span ng-click="goToBook('מיכה')">מיכה</span>|</td>
+            <td><span ng-click="goToBook('נחום')">נחום</span>|</td>
+            <td><span ng-click="goToBook('חבקוק')">חבקוק</span>|</td>
+        </tr>
+        <tr>
+            <td><span ng-click="goToBook('צפניה')">צפניה</span></td>
+            <td><span ng-click="goToBook('חגי')">חגי</span>|</td>
+            <td><span ng-click="goToBook('זכריה')">זכריה</span>|</td>
+            <td><span ng-click="goToBook('מלאכי')">מלאכי</span>|</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <br>
+
+
+    <p class="booksTitleP">
+        <img src="img/ctovimIcon.png" style="height: 4%; width: 10%;" />
+        <strong style="font-size: large; vertical-align: sub;">כתובים</strong>
+    </p>
+    <table class="bookNames">
+        <tr>
+            <td><span ng-click="goToBook('דברי הימים')">דברי הימים</span></td>
+            <td><span ng-click="goToBook('תהילים')">תהילים</span>|</td>
+            <td><span ng-click="goToBook('איוב')">איוב</span>|</td>
+            <td><span ng-click="goToBook('משלי')">משלי</span>|</td>
+            <td><span ng-click="goToBook('רות')">רות</span>|</td>
+        </tr>
+        <tr>
+            <td><span ng-click="goToBook('שיר השירים')">שיר השירים</span></td>
+            <td><span ng-click="goToBook('קוהלת')">קוהלת</span>|</td>
+            <td><span ng-click="goToBook('איכה')">איכה</span>|</td>
+            <td><span ng-click="goToBook('אסתר')">אסתר</span>|</td>
+            <td><span ng-click="goToBook('דניאל')">דניאל</span>|</td>
+        </tr>
+        <tr>
+            <td><span ng-click="goToBook('ישעיהו')">ישעיהו</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+
+
+
+    <!-- Modal -->
+    <div id="info" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">אודות</h4>
+                </div>
+                <div class="modal-body">
+<p>גרסא 1.2.2</p>
+                <p>כל הזכויות שמורות למפתח האפליקציה מעיין לייפר</p>
+                <p>ניתן ליצור קשר במייל <a href="mailto:maayanadmin@gmail.com">maayanadmin@gmail.com</a></p>
+            </div>
+            <div class="modal-footer">
+                <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">סגירה</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="menu" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">תפריט</h4>
+            </div>
+            <div class="modal-body">
+                <center>
+                    <select id="parashaSelect" class="btn btn-primary" type="submit" style="margin-top: 4%; margin-bottom: 4%;">
+                        <option disabled selected>פרשות</option>
+                        <option value="בראשית">בראשית</option>
+                        <option value="נח">נח</option>
+                        <option value="לך לך">לך לך</option>
+                        <option value="וירא">וירא</option>
+                        <option value="חיי שרה">חיי שרה</option>
+                        <option value="תולדות">תולדות</option>
+                        <option value="ויצא">ויצא</option>
+                        <option value="וישלח">וישלח</option>
+                        <option value="וישב">וישב</option>
+                        <option value="מקץ">מקץ</option>
+                        <option value="ויגש">ויגש</option>
+                        <option value="ויחי">ויחי</option>
+                        <option value="שמות">שמות</option>
+                        <option value="וארא">וארא</option>
+                        <option value="בא">בא</option>
+                        <option value="בשלח">בשלח</option>
+                        <option value="יתרו">יתרו</option>
+                        <option value="משפטים">משפטים</option>
+                        <option value="תרומה">תרומה</option>
+                        <option value="תצוה">תצוה</option>
+                        <option value="כי תשא">כי תשא</option>
+                        <option value="ויקהל">ויקהל</option>
+                        <option value="פקודי">פקודי</option>
+                        <option value="ויקרא">ויקרא</option>
+                        <option value="צו">צו</option>
+                        <option value="שמיני">שמיני</option>
+                        <option value="תזריע">תזריע</option>
+                        <option value="מצורע">מצורע</option>
+                        <option value="אחרי מות">אחרי מות</option>
+                        <option value="קדושים">קדושים</option>
+                        <option value="אמור">אמור</option>
+                        <option value="בהר">בהר</option>
+                        <option value="בחוקתי">בחוקתי</option>
+                        <option value="במדבר">במדבר</option>
+                        <option value="נשא">נשא</option>
+                        <option value="בהעלותך">בהעלותך</option>
+                        <option value="שלח">שלח</option>
+                        <option value="קרח">קרח</option>
+                        <option value="חקת">חקת</option>
+                        <option value="בלק">בלק</option>
+                        <option value="פנחס">פנחס</option>
+                        <option value="מטות">מטות</option>
+                        <option value="מסעי">מסעי</option>
+                        <option value="דברים">דברים</option>
+                        <option value="ואתחנן">ואתחנן</option>
+                        <option value="עקב">עקב</option>
+                        <option value="ראה">ראה</option>
+                        <option value="שופטים">שופטים</option>
+                        <option value="כי תצא">כי תצא</option>
+                        <option value="כי תבוא">כי תבוא</option>
+                        <option value="נצבים">נצבים</option>
+                        <option value="וילך">וילך</option>
+                        <option value="האזינו">האזינו</option>
+                        <option value="וזאת הברכה">וזאת הברכה</option>
+                    </select>
+                    <input onclick="exitApp()" class="btn btn-danger" type="button" style="margin-top: 4%; margin-bottom: 4%; display: block; padding-right: 5%; padding-left: 24%;" value="יציאה">
+                </center>
+            </div>
+            <div class="modal-footer">
+                <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">סגירה</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>

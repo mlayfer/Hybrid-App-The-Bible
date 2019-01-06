@@ -1,0 +1,309 @@
+@font-face {
+    font-family: stam;
+    src: url(../fonts/stamashkenazclm-webfont.woff);
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: Arial;
+	color: #000000;
+	background-color: floralwhite;
+}
+
+p.m {
+	font-size: 80%;
+	text-align: left;
+}
+
+p.s {
+	font-size: 80%;
+	text-align: justify;
+}
+
+big {
+	font-size: 120%;
+	vertical-align: -7%;
+}
+
+small {
+	font-size: 80%;
+	vertical-align: 12%;
+	font-weight: bold
+}
+
+sup {
+	font-size: 115%;
+	vertical-align: 15%;
+}
+
+span.tiny {
+	font-size: 80%;
+}
+
+span.h {
+    font-family: stam;
+}
+
+span.x {
+	color: #660066;
+}
+
+span.y {
+	font-size: 80%;
+}
+
+span.eng {
+	font-family: "Times New Roman, Arial";
+	font-size: 80%;
+}
+
+TD {
+	vertical-align: top;
+	direction: ltr;
+	unicode-bidi: embed;
+	text-align: left;
+	font-size: 132%;
+    text-align: right;
+}
+
+TD.h {
+	vertical-align: top;
+	direction: rtl;
+	unicode-bidi: embed;
+	text-align: right;
+	font-size: 165%;
+	font-family: David;
+}
+
+TD.m {
+	vertical-align: middle;
+	direction: ltr;
+	unicode-bidi: embed;
+	text-align: left;
+	font-size: 120%;
+}
+
+a {
+	margin: 3px;
+	color: #337ab7;
+	text-decoration: none;
+    font-family: stam;
+}
+
+.nav-tabs>li {
+	float: right;
+	margin: -12px;
+    margin-left: 18%;
+}
+
+.h2, h2 {
+	font-size: 30px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover	{
+    color: #FFF;
+    background-color: #337ab7;
+    border-bottom-color: white;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+b{
+    color: #337ab7;
+    text-decoration: underline;
+    margin-left: 3%;
+}
+
+ul{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    direction: rtl;
+}
+
+.nav-tabs>li>a {
+    margin-right: 15px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    font-size: 28px;
+}
+
+h1{
+    margin-top: 10px !important;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 12px !important;
+}
+
+.backImg{
+height: 4%;
+    position: absolute;
+    right: 24%;
+    top: 1%;
+    right: 0;
+    margin-right: 5%;
+
+}
+
+a:focus, a:hover {
+    color: #23527c;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+.increaseText{
+    font-size: 24px;
+    background-color: #337ab7;
+    height: 30px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    line-height: 1.25;
+    color: white;
+    width: 10%;
+    margin-top: 2.7%;
+    position: absolute;
+    left: 4%;
+}
+
+.decreaseText{
+    font-size: 16px;
+    background-color: #337ab7;
+    height: 30px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    line-height: 1.85;
+    color: white;
+    width: 10%;
+    margin-top: 2.7%;
+    position: absolute;
+    left: 14.5%;
+}
+#loader{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  z-index: 99999;
+  background: rgb(92, 92, 92);
+  background: rgba(92, 92, 92, 0.8);
+  display:none;
+}
+#loader img{
+  height: 49px;
+  width: 49px;
+  position: relative;
+  top: 35.5%;
+  right: 43.2%;
+}
+
+p {
+    text-align: right;
+}
+
+#menuIcon {
+    height: 4%; position: fixed; top: 14px; left: 19px; width: 10%;
+}
+
+.navbar {
+    margin-bottom: 8px;
+}
+
+.navbar-brand {
+    float: left; height: 50px; padding: 15px 26px; font-size: 18px; line-height: 20px; color: white;
+}
+
+#navTitle {
+    text-align: center;
+    font-size: 36px; line-height: 10px; margin: 0 0 0px; margin-top: 0 !important; margin-left: 28px; font-family: stam; letter-spacing: 2px; position: fixed; right: 36%;
+color: white;
+}
+
+#mezuza {
+    height: 5%;
+    position: fixed;
+    top: 1%;
+    right: 0;
+    width: 15%;
+}
+
+.navbar-header {
+    background-color: #337ab7;
+}
+
+#parashaBtn {
+    margin-top: 3%; margin-bottom: 3%;
+}
+
+.bookNames {
+    width:100%; direction:rtl; font-size: 14px;
+}
+
+.bookNames span {
+    color: steelblue;
+	text-decoration: none;
+    font-family: stam;
+    margin-right: 8%;
+}
+
+#mainPic img{
+        width: 60%;
+}
+
+.booksTitleP {
+    direction: rtl;
+}
+
+.booksDiv {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+#perekNav {
+    background-color: ghostwhite; font-weight: bold; border-bottom: #337ab7; border-top: #337ab7; border-style: solid; border-right-width: 0; border-left-width: 0;
+}
+
+#perekTextDiv {
+    position: relative; overflow-y: scroll; padding-left: 7%; padding-right: 7%; top: 18%;
+}
+
+#zoomDiv {
+    position: absolute; top: 0; width: 100%; background-color: floralwhite; z-index: 9999;
+}
+
+#prakimNav {
+    margin-top: 0; font-size: 32px; font-weight: bold; text-align: center;
+}
+
+#searchDiv {
+    text-align: center;
+    direction: rtl;
+}
+
+#searchText {
+    display: inline-block;
+    width: 72%;
+}
+
+#parashaSelect {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    direction: rtl;
+    width: 39%;
+}
+
+.search-found {
+    background-color: deepskyblue;
+}

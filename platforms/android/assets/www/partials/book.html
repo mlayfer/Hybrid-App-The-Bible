@@ -1,0 +1,32 @@
+﻿
+
+<div id="prakimNav">
+    <div id="zoomDiv">
+        <div class="increaseText" ng-click="zoomIn()">+א</div>
+        <div class="decreaseText" ng-click="zoomOut()">-א</div>
+    </div>
+    <span class=h ng-bind="currentBookName"></span>
+    <img src="img/back.png" class="backImg" ng-click="goToMain()" />
+</div>
+
+<ul class="nav nav-tabs" id="perekNav">
+    <li ng-repeat="(perek,val) in currentBook" role="presentation" ng-class="{'active': perek == currentPerek}">
+        <a data-toggle="tab" ng-click="choosePerek(perek)" ng-bind="perek"></a>
+    </li>
+</ul>
+
+
+<div class="tab-content" id="perekTextDiv">
+    <div id="perek1" class="tab-pane fade in active">
+        <table cellpadding="4" cellspacing="4" width="100%" ng-repeat='(pasok,pasokVal) in currentBook[currentPerek]'>
+            <tr>
+                <td class=h>
+                    <b ng-bind='pasokVal["pasok"]'></b>
+                    <span class="pasokText search-found" ng-bind="pasokVal['text']" ng-if="pasokVal['text']==searchedPasok"></span>
+                    <span class="pasokText" ng-bind="pasokVal['text']" ng-if="pasokVal['text']!=searchedPasok"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
